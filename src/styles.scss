@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+p, blockquote, input {
+    font-size: .9em;
+    line-height: 1.4em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

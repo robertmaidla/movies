@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="queries">
+    <ul>
+      <li>
+        <form [formGroup]="searchForm" (ngSubmit)="onSearchSubmit()">
+            <input type="text" placeholder="Search.." formControlName="searchInput">
+        </form>
+      </li>
+      <li>
+        <a (click)="showGenreMenu = !showGenreMenu">{{selectedGenre}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="searchError" class="search-error">
+    <div>No results found</div>
+  </div>
+
+  <div *ngIf="showGenreMenu">
+    <ul class="genre-menu">
+      <li *ngFor="let genre of genres">
+          <a (click)="onNewGenre(genre)">{{genre}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="movies">
+    <ul *ngIf="displayedMovies">
+      <li *ngFor="let movie of displayedMovies; index as i">
+        <img routerLink="/movie-detail/{{movie.key}}" [src]="getImg(movie)">
+      </li>
+    </ul>
+  </div>
+</div>

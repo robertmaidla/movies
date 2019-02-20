@@ -1,0 +1,91 @@
+.container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.queries {
+  li {
+    display: inline-block;
+    margin: .5em;
+  }
+
+  form:focus, input:focus {
+    outline: none;
+    background: #305F72;
+  }
+
+  input, a {
+    border: .4em solid #305F72;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    color: black;
+    display: block;
+    padding: .5em;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  input:hover, a:hover {
+    background: #305F72;
+  }
+}
+
+.genre-menu {
+  li:hover {
+    border-color: #305F72;
+    border-radius: 5px;
+  }
+  
+  li {
+    border: .1em solid white;
+    border-radius: 5px;
+    display: inline-block;
+    width: 5em;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.movies {
+  margin: 1em;
+  li {
+    display: inline-block;
+    text-align: center;
+    margin: .2em;
+    cursor: pointer;
+    opacity: .9;
+  }
+
+  li:hover {
+    opacity: 1;
+  }
+}
+
+// Adjust to mobile
+@media only screen and (max-width: 410px) {
+  // Make images to fit 2 columns
+  .movies {
+    margin: .2em;
+
+    li {
+      margin: .1em;
+      width: 100px;
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+  // Genre item sizes bigger for mobile
+  .menu {
+    li {
+      margin: 1em;
+    }
+  }
+}

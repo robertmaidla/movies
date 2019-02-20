@@ -1,0 +1,32 @@
+.container {
+    margin-top: 1em;
+}
+
+li {
+    display: inline-block;
+    margin: .5em;
+}
+
+.back {
+
+    a {
+        border: .4em solid #305F72;
+        margin: auto;
+        text-align: center;
+        text-decoration: none;
+        width: 5em;
+        color: black;
+        display: block;
+        padding: .5em;
+        border-radius: 10px;
+        transition: background-color .2s ease;
+        
+    }
+
+    a:hover {
+        background: #305F72;
+    }
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+}

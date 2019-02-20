@@ -1,0 +1,17 @@
+<div class="container">
+  <img [src]="getImg()">
+  <div>
+      <h1>{{movie.name}}</h1>
+      <ul>
+        <li *ngFor="let genre of movie.genres">
+          <p>{{genre}}</p>
+        </li>
+      </ul>
+      <p>{{movie.description}}</p>
+      <p>Length: {{movie.length}}</p>
+      <h4>Rating: {{movie.rate}}</h4>
+  </div>
+  <div class="back">
+    <a routerLink="/">Back</a>
+  </div>
+</div>
